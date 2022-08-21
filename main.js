@@ -23,8 +23,6 @@ cities.forEach((city)=>
     city.addEventListener("click",(e)=>
     {
         cityInput=e.target.innerHTML;
-        console.log(cityInput);
-
         /* Function that fetches and displays all the data from the Weather API */
         fetchWeatherData();
         //fade out the app (simple animation)
@@ -62,7 +60,6 @@ function fetchWeatherData()
     .then(response => response.json())
     .then(data =>
         {
-            console.log(data);
 
             //adding temperature and weather condition to the page
             temp.innerHTML=data.current.feelslike_c + "&#176;";
@@ -70,7 +67,11 @@ function fetchWeatherData()
 
             //get date and time from the city and extract day,month,year and time into variables
             const date=data.location.localtime;
-            const y=parseInt(date.substr(0,4));
+            const y=parseInt(date.substr
+                 
+                  
+                   
+                    (0,4));
             const m=parseInt(date.substr(5,2));
             const d=parseInt(date.substr(8,2));
             const time=date.substr(11);
